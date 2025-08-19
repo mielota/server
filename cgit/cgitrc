@@ -13,6 +13,13 @@ enable-http-clone=1
 source-filter=/usr/lib/cgit/filters/syntax-highlighting.py
 about-filter=/usr/lib/cgit/filters/about-formatting.sh
 
+readme=:README.md
+readme=:readme.md
+readme=:README.txt
+readme=:readme.txt
+readme=:README
+readme=:readme
+
 robots=noindex, nofollow
 
 scan-path=/var/git/
