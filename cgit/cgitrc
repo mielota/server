@@ -4,9 +4,24 @@ logo=/cgit.png
 virtual-root=/
 
 clone-url=git://git.mielota.com/$CGIT_REPO_URL git@mielota.com:$CGIT_REPO_URL
-enable-http-clone=1
 
 root-title=mielota
 root-desc=
+
+enable-http-clone=1
+
+source-filter=/usr/lib/cgit/filters/syntax-highlighting.py
+about-filter=/usr/lib/cgit/filters/about-formatting.sh
+
+robots=noindex, nofollow
+
+cache-size=1024
+
+readme=:README.md
+readme=:readme.md
+readme=:README.txt
+readme=:readme.txt
+readme=:README
+readme=:readme
 
 scan-path=/var/git
