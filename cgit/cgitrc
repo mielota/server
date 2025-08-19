@@ -15,13 +15,4 @@ about-filter=/usr/lib/cgit/filters/about-formatting.sh
 
 robots=noindex, nofollow
 
-cache-size=1024
-
-readme=:README.md
-readme=:readme.md
-readme=:README.txt
-readme=:readme.txt
-readme=:README
-readme=:readme
-
-scan-path=/var/git
+scan-path=/var/git/
