@@ -1,0 +1,12 @@
+css=/cgit.css
+logo=/cgit.png
+
+virtual-root=/
+
+clone-url=git://git.mielota.com/$CGIT_REPO_URL git@mielota.com:$CGIT_REPO_URL
+enable-http-clone=1
+
+root-title=mielota
+root-desc=
+
+scan-path=/var/git
