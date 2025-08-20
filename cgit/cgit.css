@@ -5,6 +5,10 @@ body {
   margin: 0px;
 }
 
+.code code {
+  font-family: "Jetbrains Mono Nerdfont";
+}
+
 pre.literal-block {
   background-color: #3c3836;
   padding: 1em;
@@ -54,7 +58,7 @@ ul > li {
 }
 ul > li:before {
   content: "\e080";
-
+  font-family: "Jetbrains Mono Nerdfont";
   font-size: 9px;
   float: left;
   margin-left: -17px;
@@ -91,7 +95,7 @@ div#cgit input:focus {
 div#cgit {
   padding: 0em;
   margin: 0em;
-
+  font-family: "Jetbrains Mono Nerdfont";
   font-size: 10pt;
   color: #ebdbb2;
   background: #282828;
@@ -126,6 +130,9 @@ div#cgit table#header td.main {
   font-size: 250%;
   padding-left: 10px;
   white-space: nowrap;
+}
+
+div#cgit table#header td.main a {
 }
 
 div#cgit table#header td.form {
@@ -266,6 +273,7 @@ div#cgit table.list td {
 }
 
 div#cgit table.list td.commitgraph {
+  font-family: "Jetbrains Mono Nerdfont";
   white-space: pre;
 }
 
@@ -294,10 +302,12 @@ div#cgit table.list td.commitgraph .column6 {
 }
 
 div#cgit table.list td.logsubject {
+  font-family: "Jetbrains Mono Nerdfont";
   font-weight: bold;
 }
 
 div#cgit table.list td.logmsg {
+  font-family: "Jetbrains Mono Nerdfont";
   white-space: pre;
   padding: 0 0.5em;
 }
@@ -356,13 +366,20 @@ div#cgit div.error {
   margin: 1em 2em;
 }
 
+div#cgit a.ls-blob,
+div#cgit a.ls-dir,
+div#cgit .ls-mod {
+  font-family: "Jetbrains Mono Nerdfont";
+}
+
 div#cgit td.ls-size {
   text-align: right;
-
+  font-family: "Jetbrains Mono Nerdfont";
   width: 10em;
 }
 
 div#cgit td.ls-mode {
+  font-family: "Jetbrains Mono Nerdfont";
   width: 10em;
 }
 
@@ -370,6 +387,10 @@ div#cgit table.blob {
   table-layout: fixed;
   margin-top: 0.5em;
   border-top: solid 1px #fbf1c7;
+}
+
+div#cgit pre {
+  font-family: "Jetbrains Mono Nerdfont";
 }
 
 div#cgit table.blob td.lines {
@@ -444,12 +465,14 @@ div#cgit table.bin-blob {
 }
 
 div#cgit table.bin-blob th {
+  font-family: "Jetbrains Mono Nerdfont";
   white-space: pre;
   border: solid 1px #a89984;
   padding: 0.5em 1em;
 }
 
 div#cgit table.bin-blob td {
+  font-family: "Jetbrains Mono Nerdfont";
   white-space: pre;
   border-left: solid 1px #a89984;
   padding: 0em 1em;
@@ -511,6 +534,7 @@ div#cgit div.commit-subject {
 
 div#cgit div.commit-msg {
   white-space: pre;
+  font-family: "Jetbrains Mono Nerdfont";
 }
 
 div#cgit div.notes-header {
@@ -520,7 +544,7 @@ div#cgit div.notes-header {
 
 div#cgit div.notes {
   white-space: pre;
-
+  font-family: "Jetbrains Mono Nerdfont";
   border: solid 1px #ee9;
   padding: 0.3em 2em 0.3em 1em;
   float: left;
@@ -603,6 +627,7 @@ div#cgit table.diff {
 }
 
 div#cgit table.diff td {
+  font-family: "Jetbrains Mono Nerdfont";
   white-space: pre;
 }
 
@@ -624,6 +649,7 @@ div#cgit table.diff td div.del {
 }
 
 div#cgit .sha1 {
+  font-family: "Jetbrains Mono Nerdfont";
   font-size: 90%;
 }
 
@@ -831,6 +857,7 @@ div#cgit table.ssdiff {
 
 div#cgit table.ssdiff td {
   font-size: 75%;
+  font-family: "Jetbrains Mono Nerdfont";
   white-space: pre;
   padding: 1px 4px 1px 4px;
   border-left: solid 1px #928374;
@@ -913,70 +940,59 @@ div#cgit table.ssdiff td.space div {
   min-height: 3em;
 }
 
+div#cgit span.docutils.literal {
+  font-family: "Jetbrains Mono Nerdfont";
+}
+
 div#cgit {
   min-width: 320px;
 }
 
-@media (max-width: 600px) {
-  div#cgit div.path {
-    padding: 5px;
+/* see https://github.com/MatejaMaric/responsive-cgit-css/blob/master/cgit.css */
+@media only screen and (max-width: 800px) {
+  /* remove logo (save space) */
+  div#cgit table#header td.logo {
+    display: none;
   }
-
-  div#cgit div.content {
-    padding: 1em 0;
+  /* wrap title text */
+  div#cgit table#header td.main {
+    white-space: normal;
   }
-
-  div#cgit table#header {
+  /* td as block */
+  div#cgit table#header td {
     display: block;
   }
+  /* move branch switcher to left */
+  div#cgit table#header td.form {
+    text-align: left;
+  }
+  /* Don't display author (save space) */
+  div#cgit table#header td.sub.right {
+    display: none;
+  }
 
-  div#cgit div.forms {
-    margin-top: 0;
+  /* TABS */
+  /* both tabs and form are blocks */
+  div#cgit table.tabs td {
     display: block;
-    float: none;
   }
-
-  div#cgit div.tabs {
-    margin-top: 1em;
-  }
-
-  div#cgit div.tabs div {
-    padding: 0;
-    padding-bottom: 1em;
-  }
-
-  div#cgit div.tabs div a {
-    padding: 3px 1em;
-    margin: 0 -1em;
+  /* every tab is block */
+  div#cgit table.tabs td a {
+    display: block;
     text-align: right;
-    display: block;
   }
 
+  /* CONTENT */
+  div#cgit div.content {
+    overflow-x: auto;
+    padding: 0.5em;
+  }
+  td.ls-mode {
+    white-space: nowrap;
+  }
+
+  /* PANEL ALIGNMENT */
   div#cgit div.cgit-panel {
-    float: none;
+    float: left;
   }
-
-  div#cgit div.cgit-panel table {
-    display: inline-block;
-  }
-}
-
-.mCustomScrollbar,
-.mCustomScrollbar.mCS_touch_action,
-.mCustomScrollbar.mCS_touch_action .mCS-aviva.mCSB_scrollTools {
-  -ms-touch-action: auto;
-  touch-action: auto;
-}
-.mCustomScrollBox {
-  -ms-touch-action: pan-x pinch-zoom;
-  touch-action: pan-x pinch-zoom;
-}
-
-.mCustomScrollBox.mCSB_vertical_horizontal {
-  -ms-touch-action: pinch-zoom;
-  touch-action: pinch-zoom;
-}
-.mCustomScrollBox.mCSB_horizontal {
-  -ms-touch-action: pan-y pinch-zoom;
-  touch-action: pan-y pinch-zoom;
 }
