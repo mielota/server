@@ -1,14 +1,34 @@
-/* see https://github.com/Determinant/cgit-dark/blob/master/assets/css/cgit.css */
-
 @font-face {
   font-family: "Jetbrains Mono Nerdfont";
-  src: url('fonts/JetBrainsMono-Regular.ttf') format("truetype");
+  src: url("fonts/JetBrainsMono-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
+/* Tokyonight colorscheme */
+:root {
+  --bg: #1a1b26;
+  --fg: #a9b1d6;
+  --black: #32344a;
+  --red: #f7768e;
+  --green: #9ece6a;
+  --yellow: #e0af68;
+  --blue: #7aa2f7;
+  --magenta: #ad8ee6;
+  --cyan: #449dab;
+  --white: #787c99;
+  --m: 22%;
+  --fs: x-large;
+}
+
+.logo {
+  display: none;
+}
+
+/* see https://github.com/Determinant/cgit-dark/blob/master/assets/css/cgit.css */
+
 body {
-  background: #282828;
+  background: var(--bg);
   margin: 0px;
 }
 
@@ -17,7 +37,7 @@ body {
 }
 
 pre.literal-block {
-  background-color: #3c3836;
+  background-color: var(--bg);
   padding: 1em;
   overflow: auto;
   line-height: 1.3em;
@@ -27,7 +47,7 @@ pre.literal-block {
 }
 
 span.literal {
-  background-color: #3c3836;
+  background-color: var(--bg);
   padding: 0.1em 0.35em;
   overflow: auto;
   line-height: 1.3em;
@@ -86,9 +106,9 @@ div#cgit input {
   padding: 0 0.3em;
   height: 2em;
   vertical-align: middle;
-  border: 1px solid #ebdbb2;
-  background-color: #1d2021;
-  color: #d5c4a1;
+  border: 1px solid var(--fg);
+  background-color: var(--black);
+  color: var(--fg);
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -104,18 +124,18 @@ div#cgit {
   margin: 0em;
   font-family: "Jetbrains Mono Nerdfont";
   font-size: 10pt;
-  color: #ebdbb2;
-  background: #282828;
+  color: var(--fg);
+  background: var(--bg);
   padding: 1em;
 }
 
 div#cgit a {
-  color: #ebdbb2;
+  color: var(--fg);
   text-decoration: none;
 }
 
 div#cgit a:hover {
-  color: #ebdbb2;
+  color: var(--fg);
   text-decoration: underline;
 }
 
@@ -137,9 +157,7 @@ div#cgit table#header td.main {
   font-size: 250%;
   padding-left: 10px;
   white-space: nowrap;
-}
-
-div#cgit table#header td.main a {
+  color: var(--magenta);
 }
 
 div#cgit table#header td.form {
@@ -157,13 +175,13 @@ div#cgit table#header td.form select {
 }
 
 div#cgit table#header td.sub {
-  color: #a89984;
+  color: var(--cyan);
   padding-left: 10px;
 }
 
 div#cgit .tabs {
   clear: both;
-  border-bottom: solid 2px #d5c4a1;
+  border-bottom: solid 2px var(--fg);
   border-collapse: collapse;
   /* margin-top: 2em; */
   margin-bottom: 0px;
@@ -178,13 +196,13 @@ div.tabs div {
 
 div#cgit .tabs a {
   padding: 3px 0.75em;
-  color: #d5c4a1;
+  color: var(--fg);
   font-size: 110%;
 }
 
 div#cgit .tabs a.active {
   color: #000;
-  background-color: #d5c4a1;
+  background-color: var(--fg);
 }
 
 div#cgit .tabs a[href^="http://"]:after, div#cgit div.tabs a[href^="https://"]:after
@@ -232,13 +250,13 @@ div#cgit .form select {
 div#cgit div.path {
   margin: 0px;
   padding: 5px 2em 2px 2em;
-  background: #3c3836;
+  background: var(--bg);
 }
 
 div#cgit div.content {
   margin: 0px;
   padding: 2em;
-  border-bottom: solid 2px #d5c4a1;
+  border-bottom: solid 2px var(--fg);
 }
 
 div#cgit table.list {
@@ -249,23 +267,23 @@ div#cgit table.list {
 }
 
 div#cgit table.list tr:nth-child(even) {
-  background: #2a2a2a;
+  background: var(--black);
 }
 
 div#cgit table.list tr:nth-child(odd) {
-  background: #323232;
+  background: var(--bg);
 }
 
 div#cgit table.list tr:hover {
-  background: #282828;
+  background: var(--bg);
 }
 
 div#cgit table.list tr.nohover-highlight:hover:nth-child(even) {
-  background: #323232;
+  background: var(--blue);
 }
 
 div#cgit table.list tr.nohover-highlight:hover:nth-child(odd) {
-  background: #2a2a2a;
+  background: var(--blue);
 }
 
 div#cgit table.list th {
@@ -354,21 +372,21 @@ div#cgit div#summary {
 div#cgit table#downloads {
   float: right;
   border-collapse: collapse;
-  border: solid 1px #a89984;
+  border: solid 1px var(--fg);
   margin-left: 0.5em;
   margin-bottom: 0.5em;
 }
 
 div#cgit table#downloads th {
-  background-color: #d5c4a1;
+  background-color: var(--fg);
 }
 
 div#cgit div#blob {
-  border: solid 1px #fbf1c7;
+  border: solid 1px var(--fg);
 }
 
 div#cgit div.error {
-  color: #cc241d;
+  color: var(--red);
   font-weight: bold;
   margin: 1em 2em;
 }
@@ -393,7 +411,7 @@ div#cgit td.ls-mode {
 div#cgit table.blob {
   table-layout: fixed;
   margin-top: 0.5em;
-  border-top: solid 1px #fbf1c7;
+  border-top: solid 1px var(--fg);
 }
 
 div#cgit pre {
@@ -411,7 +429,7 @@ div#cgit table.blob td.linenumbers {
   padding: 0.5em 0.5em 0 0.5em;
   vertical-align: top;
   text-align: right;
-  border-right: 1px solid #fbf1c7;
+  border-right: 1px solid var(--fg);
 }
 
 div#cgit table.blob pre {
@@ -441,11 +459,11 @@ div#cgit table.blame td.linenumbers div.alt {
 }
 
 div#cgit table.blame div.alt:nth-child(even) {
-  background: #2a2a2a;
+  background: var(--black);
 }
 
 div#cgit table.blame div.alt:nth-child(odd) {
-  background: #323232;
+  background: var(--black);
 }
 
 div#cgit table.blame td.lines > div {
@@ -468,20 +486,20 @@ div#cgit table.blame .code span {
 
 div#cgit table.bin-blob {
   margin-top: 0.5em;
-  border: solid 1px #fbf1c7;
+  border: solid 1px var(--fg);
 }
 
 div#cgit table.bin-blob th {
   font-family: "Jetbrains Mono Nerdfont";
   white-space: pre;
-  border: solid 1px #a89984;
+  border: solid 1px var(--fg);
   padding: 0.5em 1em;
 }
 
 div#cgit table.bin-blob td {
   font-family: "Jetbrains Mono Nerdfont";
   white-space: pre;
-  border-left: solid 1px #a89984;
+  border-left: solid 1px var(--fg);
   padding: 0em 1em;
 }
 
@@ -501,7 +519,7 @@ div#cgit div.cgit-panel {
 
 div#cgit div.cgit-panel table {
   border-collapse: collapse;
-  border: solid 1px #928374;
+  border: solid 1px var(--fg);
 }
 
 div#cgit div.cgit-panel th {
@@ -552,7 +570,7 @@ div#cgit div.notes-header {
 div#cgit div.notes {
   white-space: pre;
   font-family: "Jetbrains Mono Nerdfont";
-  border: solid 1px #ee9;
+  border: solid 1px var(--yellow);
   padding: 0.3em 2em 0.3em 1em;
   float: left;
 }
@@ -590,15 +608,15 @@ div#cgit table.diffstat td.mode {
 
 div#cgit table.diffstat td span.modechange {
   padding-left: 1em;
-  color: #cc241d;
+  color: var(--blue);
 }
 
 div#cgit table.diffstat td.add a {
-  color: #98971a;
+  color: var(--green);
 }
 
 div#cgit table.diffstat td.del a {
-  color: #cc241d;
+  color: var(--red);
 }
 
 div#cgit table.diffstat td.graph {
@@ -617,15 +635,15 @@ div#cgit table.diffstat td.graph td {
 }
 
 div#cgit table.diffstat td.graph td.add {
-  background-color: #b8bb26;
+  background-color: var(--green);
 }
 
 div#cgit table.diffstat td.graph td.rem {
-  background-color: #fb4934;
+  background-color: var(--red);
 }
 
 div#cgit div.diffstat-summary {
-  color: #ebdbb2;
+  color: var(--fg);
   padding-top: 0.5em;
 }
 
@@ -644,15 +662,15 @@ div#cgit table.diff td div.head {
 }
 
 div#cgit table.diff td div.hunk {
-  color: #fe8019;
+  color: var(--blue);
 }
 
 div#cgit table.diff td div.add {
-  color: #98971a;
+  color: var(--green);
 }
 
 div#cgit table.diff td div.del {
-  color: #cc241d;
+  color: var(--red);
 }
 
 div#cgit .sha1 {
@@ -670,7 +688,7 @@ div#cgit .right {
 
 div#cgit table.list td.reposection {
   font-style: italic;
-  color: #ebdbb2;
+  color: var(--fg);
 }
 
 div#cgit a.button {
@@ -707,7 +725,7 @@ div#cgit ul.pager > li:before {
 }
 
 div#cgit ul.pager a {
-  color: #a89984;
+  color: var(--cyan);
 }
 
 div#cgit ul.pager .current {
@@ -743,11 +761,11 @@ div#cgit div.footer {
   margin-top: 0.5em;
   text-align: center;
   font-size: 80%;
-  color: #d5c4a1;
+  color: var(--fg);
 }
 
 div#cgit div.footer a {
-  color: #d5c4a1;
+  color: var(--fg);
   text-decoration: none;
 }
 
@@ -756,31 +774,31 @@ div#cgit div.footer a:hover {
 }
 
 div#cgit a.branch-deco {
-  color: #282828;
+  color: var(--bg);
   margin: 0px 0.5em;
   padding: 2px 0.25em;
-  background-color: #b8bb26;
+  background-color: var(--green);
 }
 
 div#cgit a.tag-deco {
-  color: #282828;
+  color: var(--bg);
   margin: 0px 0.5em;
   padding: 2px 0.25em;
-  background-color: #fabd2f;
+  background-color: var(--yellow);
 }
 
 div#cgit a.remote-deco {
-  color: #282828;
+  color: var(--bg);
   margin: 2px 0.5em;
   padding: 2px 0.25em;
-  background-color: #83a598;
+  background-color: var(--cyan);
 }
 
 div#cgit a.deco {
-  color: #282828;
+  color: var(--bg);
   margin: 0px 0.5em;
   padding: 2px 0.25em;
-  background-color: #fb4934;
+  background-color: var(--red);
 }
 
 div#cgit div.commit-subject a.branch-deco,
@@ -792,20 +810,20 @@ div#cgit div.commit-subject a.deco {
 }
 
 div#cgit table.stats {
-  border: solid 1px #fbf1c7;
+  border: solid 1px var(--fg);
   border-collapse: collapse;
 }
 
 div#cgit table.stats th {
   text-align: left;
   padding: 1px 0.5em;
-  border: solid 1px #fbf1c7;
+  border: solid 1px var(--fg);
 }
 
 div#cgit table.stats td {
   text-align: right;
   padding: 1px 0.5em;
-  border: solid 1px #fbf1c7;
+  border: solid 1px var(--fg);
 }
 
 div#cgit table.stats td.total {
@@ -823,13 +841,13 @@ div#cgit table.stats td.left {
 
 div#cgit table.vgraph {
   border-collapse: separate;
-  border: solid 1px #fbf1c7;
+  border: solid 1px var(--fg);
   height: 200px;
 }
 
 div#cgit table.vgraph th {
   font-weight: bold;
-  border: solid 1px white;
+  border: solid 1px var(--fg);
   padding: 1px 0.5em;
 }
 
@@ -839,13 +857,13 @@ div#cgit table.vgraph td {
 }
 
 div#cgit table.hgraph {
-  border: solid 1px #fbf1c7;
+  border: solid 1px var(--fg);
   width: 800px;
 }
 
 div#cgit table.hgraph th {
   font-weight: bold;
-  border: solid 1px #fbf1c7;
+  border: solid 1px var(--fg);
   padding: 1px 0.5em;
 }
 
@@ -867,47 +885,47 @@ div#cgit table.ssdiff td {
   font-family: "Jetbrains Mono Nerdfont";
   white-space: pre;
   padding: 1px 4px 1px 4px;
-  border-left: solid 1px #928374;
-  border-right: solid 1px #928374;
+  border-left: solid 1px var(--fg);
+  border-right: solid 1px var(--fg);
 }
 
 div#cgit table.ssdiff td.add {
-  background: #cfc;
+  background: var(--green);
   min-width: 50%;
 }
 
 div#cgit table.ssdiff td.add_dark {
-  background: #aca;
+  background: var(--green);
   min-width: 50%;
 }
 
 div#cgit table.ssdiff span.add {
-  background: #cfc;
+  background: var(--green);
   font-weight: bold;
 }
 
 div#cgit table.ssdiff td.del {
-  background: #fcc;
+  background: var(--red);
   min-width: 50%;
 }
 
 div#cgit table.ssdiff td.del_dark {
-  background: #caa;
+  background: var(--red);
   min-width: 50%;
 }
 
 div#cgit table.ssdiff span.del {
-  background: #fcc;
+  background: var(--red);
   font-weight: bold;
 }
 
 div#cgit table.ssdiff td.changed {
-  background: #ffc;
+  background: var(--blue);
   min-width: 50%;
 }
 
 div#cgit table.ssdiff td.changed_dark {
-  background: #cca;
+  background: var(--blue);
   min-width: 50%;
 }
 
@@ -919,13 +937,13 @@ div#cgit table.ssdiff td.lineno {
 
 div#cgit table.ssdiff td.hunk {
   background: #ccf;
-  border-top: solid 1px #928374;
-  border-bottom: solid 1px #928374;
+  border-top: solid 1px var(--fg);
+  border-bottom: solid 1px var(--fg);
 }
 
 div#cgit table.ssdiff td.head {
-  border-top: solid 1px #928374;
-  border-bottom: solid 1px #928374;
+  border-top: solid 1px var(--fg);
+  border-bottom: solid 1px var(--fg);
 }
 
 div#cgit table.ssdiff td.head div.head {
@@ -933,7 +951,7 @@ div#cgit table.ssdiff td.head div.head {
 }
 
 div#cgit table.ssdiff td.foot {
-  border-top: solid 1px #928374;
+  border-top: solid 1px var(--fg);
   border-left: none;
   border-right: none;
   border-bottom: none;
