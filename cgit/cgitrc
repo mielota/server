@@ -1,6 +1,8 @@
 css=/cgit.css
 logo=/cgit.png
 
+head-include=/usr/share/cgit/head.html
+
 virtual-root=/
 
 clone-url=git://git.mielota.com/$CGIT_REPO_URL git@mielota.com:$CGIT_REPO_URL

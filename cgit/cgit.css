@@ -1,5 +1,12 @@
 /* see https://github.com/Determinant/cgit-dark/blob/master/assets/css/cgit.css */
 
+@font-face {
+  font-family: "Jetbrains Mono Nerdfont";
+  src: url('fonts/JetBrainsMono-Regular.ttf') format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   background: #282828;
   margin: 0px;
