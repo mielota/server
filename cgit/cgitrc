@@ -22,6 +22,4 @@ readme=:readme.txt
 readme=:README
 readme=:readme
 
-robots=noindex, nofollow
-
 scan-path=/var/git/
