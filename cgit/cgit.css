@@ -1,10 +1,3 @@
-@font-face {
-  font-family: "Jetbrains Mono Nerdfont";
-  src: url("fonts/JetBrainsMono-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
 /* Tokyonight colorscheme */
 :root {
   --bg: #1a1b26;
@@ -17,8 +10,6 @@
   --magenta: #ad8ee6;
   --cyan: #449dab;
   --white: #787c99;
-  --m: 22%;
-  --fs: x-large;
 }
 
 .logo {
@@ -33,7 +24,7 @@ body {
 }
 
 .code code {
-  font-family: "Jetbrains Mono Nerdfont";
+  font-family: "Courier new", Courier, monospace;
 }
 
 pre.literal-block {
@@ -85,7 +76,7 @@ ul > li {
 }
 ul > li:before {
   content: "\e080";
-  font-family: "Jetbrains Mono Nerdfont";
+  font-family: "Courier new", Courier, monospace;
   font-size: 9px;
   float: left;
   margin-left: -17px;
@@ -122,7 +113,7 @@ div#cgit input:focus {
 div#cgit {
   padding: 0em;
   margin: 0em;
-  font-family: "Jetbrains Mono Nerdfont";
+  font-family: "Courier new", Courier, monospace;
   font-size: 10pt;
   color: var(--fg);
   background: var(--bg);
@@ -298,7 +289,7 @@ div#cgit table.list td {
 }
 
 div#cgit table.list td.commitgraph {
-  font-family: "Jetbrains Mono Nerdfont";
+  font-family: "Courier new", Courier, monospace;
   white-space: pre;
 }
 
@@ -327,12 +318,12 @@ div#cgit table.list td.commitgraph .column6 {
 }
 
 div#cgit table.list td.logsubject {
-  font-family: "Jetbrains Mono Nerdfont";
+  font-family: "Courier new", Courier, monospace;
   font-weight: bold;
 }
 
 div#cgit table.list td.logmsg {
-  font-family: "Jetbrains Mono Nerdfont";
+  font-family: "Courier new", Courier, monospace;
   white-space: pre;
   padding: 0 0.5em;
 }
@@ -394,17 +385,17 @@ div#cgit div.error {
 div#cgit a.ls-blob,
 div#cgit a.ls-dir,
 div#cgit .ls-mod {
-  font-family: "Jetbrains Mono Nerdfont";
+  font-family: "Courier new", Courier, monospace;
 }
 
 div#cgit td.ls-size {
   text-align: right;
-  font-family: "Jetbrains Mono Nerdfont";
+  font-family: "Courier new", Courier, monospace;
   width: 10em;
 }
 
 div#cgit td.ls-mode {
-  font-family: "Jetbrains Mono Nerdfont";
+  font-family: "Courier new", Courier, monospace;
   width: 10em;
 }
 
@@ -415,7 +406,7 @@ div#cgit table.blob {
 }
 
 div#cgit pre {
-  font-family: "Jetbrains Mono Nerdfont";
+  font-family: "Courier new", Courier, monospace;
 }
 
 div#cgit table.blob td.lines {
@@ -490,14 +481,14 @@ div#cgit table.bin-blob {
 }
 
 div#cgit table.bin-blob th {
-  font-family: "Jetbrains Mono Nerdfont";
+  font-family: "Courier new", Courier, monospace;
   white-space: pre;
   border: solid 1px var(--fg);
   padding: 0.5em 1em;
 }
 
 div#cgit table.bin-blob td {
-  font-family: "Jetbrains Mono Nerdfont";
+  font-family: "Courier new", Courier, monospace;
   white-space: pre;
   border-left: solid 1px var(--fg);
   padding: 0em 1em;
@@ -559,7 +550,7 @@ div#cgit div.commit-subject {
 
 div#cgit div.commit-msg {
   white-space: pre;
-  font-family: "Jetbrains Mono Nerdfont";
+  font-family: "Courier new", Courier, monospace;
 }
 
 div#cgit div.notes-header {
@@ -569,7 +560,7 @@ div#cgit div.notes-header {
 
 div#cgit div.notes {
   white-space: pre;
-  font-family: "Jetbrains Mono Nerdfont";
+  font-family: "Courier new", Courier, monospace;
   border: solid 1px var(--yellow);
   padding: 0.3em 2em 0.3em 1em;
   float: left;
@@ -652,7 +643,7 @@ div#cgit table.diff {
 }
 
 div#cgit table.diff td {
-  font-family: "Jetbrains Mono Nerdfont";
+  font-family: "Courier new", Courier, monospace;
   white-space: pre;
 }
 
@@ -674,7 +665,7 @@ div#cgit table.diff td div.del {
 }
 
 div#cgit .sha1 {
-  font-family: "Jetbrains Mono Nerdfont";
+  font-family: "Courier new", Courier, monospace;
   font-size: 90%;
 }
 
@@ -882,7 +873,7 @@ div#cgit table.ssdiff {
 
 div#cgit table.ssdiff td {
   font-size: 75%;
-  font-family: "Jetbrains Mono Nerdfont";
+  font-family: "Courier new", Courier, monospace;
   white-space: pre;
   padding: 1px 4px 1px 4px;
   border-left: solid 1px var(--fg);
@@ -966,7 +957,7 @@ div#cgit table.ssdiff td.space div {
 }
 
 div#cgit span.docutils.literal {
-  font-family: "Jetbrains Mono Nerdfont";
+  font-family: "Courier new", Courier, monospace;
 }
 
 div#cgit {
